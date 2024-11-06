@@ -1,4 +1,4 @@
-public class Posicon {
+public class Posicion {
     //Atributos
     private int fila;
     private char columna;
@@ -24,5 +24,11 @@ public class Posicon {
             throw new IllegalArgumentException("La columna debe estar entre 'a' y 'h'");
         }
         this.columna = columna;
+    }
+
+    //Constructor con parametros
+    public Posicion(int fila, char columna) {
+        setFila(fila); //Utiliza el setter con validacion
+        setColumna(columna); //Utiliza el setter con validacion
     }
 }
