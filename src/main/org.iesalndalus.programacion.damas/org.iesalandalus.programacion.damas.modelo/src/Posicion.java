@@ -31,4 +31,10 @@ public class Posicion {
         setFila(fila); //Utiliza el setter con validacion
         setColumna(columna); //Utiliza el setter con validacion
     }
+
+    //Constructor copia
+    public Posicion(Posicion otraPosicion) {
+        this.fila = otraPosicion.fila;
+        this.columna = otraPosicion.columna;
+    }
 }
