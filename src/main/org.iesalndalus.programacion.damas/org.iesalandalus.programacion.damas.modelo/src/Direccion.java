@@ -4,13 +4,13 @@ public enum Direccion {
         SUROESTE("Suroeste"),
         NOROESTE("Noroeste");
 
-        private final String nombre;
+        private final String cadenaAMostrar;
 
-        Direccion(String nombre) {
-            this.nombre = nombre;
+        Direccion(String cadenaAMostrar) {
+            this.cadenaAMostrar = cadenaAMostrar;
         }
 
-        public String getNombre() {
-            return nombre;
+        public String getCadenaAMostrar() {
+            return cadenaAMostrar;
         }
 }
