@@ -37,4 +37,19 @@ public class Posicion {
         this.fila = otraPosicion.fila;
         this.columna = otraPosicion.columna;
     }
+
+    //Metodo equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Posicion posicion = (Posicion) obj;
+        return fila == posicion.fila && columna == posicion.columna;
+    }
+
+    //Metodo hashCode
+    @Override
+    public int hashCode() {
+        return 31 * fila+columna;
+    }
 }
