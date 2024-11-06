@@ -13,4 +13,9 @@ public enum Direccion {
         public String getCadenaAMostrar() {
             return cadenaAMostrar;
         }
+
+        @Override
+        public String toString() {
+                return cadenaAMostrar;
+        }
 }
