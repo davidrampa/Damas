@@ -4,16 +4,15 @@ public enum Direccion {
         SUROESTE("Suroeste"),
         NOROESTE("Noroeste");
 
+        //Atributo para almacenar la cadena representativa
         private final String cadenaAMostrar;
 
+        //Constructor que inicializa el atributo cadenaAMostrar
         Direccion(String cadenaAMostrar) {
             this.cadenaAMostrar = cadenaAMostrar;
         }
 
-        public String getCadenaAMostrar() {
-            return cadenaAMostrar;
-        }
-
+        //Metodo toString para obtener la representacion en cadena
         @Override
         public String toString() {
                 return cadenaAMostrar;

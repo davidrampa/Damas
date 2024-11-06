@@ -4,11 +4,17 @@ public enum Color {
 
     private final String cadenaAMostrar;
 
-    private Color(String cadenaAMostrar) {
+    Color(String cadenaAMostrar) {
         this.cadenaAMostrar = cadenaAMostrar;
     }
 
     public String getCadenaAMostrar() {
         return cadenaAMostrar;
+    }
+
+    //Metodo toString para obtener la representacion en cadena
+    @Override
+    public String toString() {
+        return this.cadenaAMostrar;
     }
 }
