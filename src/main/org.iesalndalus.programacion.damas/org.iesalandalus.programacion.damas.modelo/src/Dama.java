@@ -1,8 +1,17 @@
+import java.util.Random;
+
 public class Dama {
 
     private Color color;
     private Posicion posicion;
     private boolean esDamaEspecial;
+
+    //Constructor por defecto
+    public Dama() {
+        this.color = Color.BLANCO;
+        this.posicion = crearPosicionInicial(Color.BLANCO);
+        this.esDamaEspecial = false;
+    }
 
     public Color getColor() {
         return color;
@@ -22,4 +31,5 @@ public class Dama {
     public void setEsDamaEspecial(boolean esDamaEspecial) {
         this.esDamaEspecial = esDamaEspecial;
     }
+
 }
