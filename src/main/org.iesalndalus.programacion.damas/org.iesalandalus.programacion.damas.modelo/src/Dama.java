@@ -90,4 +90,9 @@ public class Dama {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Dama{" + "color =" + color + ", posicion =" + Posicion + ", esDamaEspecial =" + esDamaEspecial + '}';
+    }
+
 }
