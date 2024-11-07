@@ -13,6 +13,16 @@ public class Dama {
         this.esDamaEspecial = false;
     }
 
+    //Constructor que acepta color
+    public Dama(Color color) {
+        if (color == null) {
+            throw new IllegalArgumentException("El color no puede ser nulo");
+        }
+        this.color = color;
+        this.posicion = crearPosicionInical(color);
+        this.esDamaEspecial = false;
+    }
+
     public Color getColor() {
         return color;
     }
