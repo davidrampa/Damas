@@ -20,7 +20,7 @@ public class Dama {
             throw new IllegalArgumentException("El color no puede ser nulo");
         }
         this.color = color;
-        this.Posicion = crearPosicionInical(color);
+        this.Posicion = crearPosicionInicial(color);
         this.esDamaEspecial = false;
     }
 
@@ -47,10 +47,10 @@ public class Dama {
     private Posicion crearPosicionInicial(Color color) {
         Random random = new Random();
         int fila = color == Color.BLANCO ? random.nextInt(3) + 1 : random.nextInt(3) + 6;
-        int columna;
+        char columna;
         do {
-            columna = random.nextInt(8) + 1;
-        } while ((fila + columna) % 2 == 0); //Asegura que este en una casilla negra
+            columna = (char) (random.nextInt(8) + 'a'); //Genera una letra de 'a' a 'h'
+        } while ((fila + columna - 'a' + 1) % 2 == 0); //Asegura que este en una casilla negra
         return new Posicion(fila, columna);
     }
 
@@ -70,7 +70,7 @@ public class Dama {
         }
 
         int nuevaFila = Posicion.getFila();
-        int nuevaColumna = Posicion.getColumna();
+        char nuevaColumna = Posicion.getColumna();
 
         switch (direccion) {
             case NORESTE -> { nuevaFila += pasos; nuevaColumna += pasos; }
