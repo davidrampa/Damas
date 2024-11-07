@@ -3,13 +3,13 @@ import java.util.Random;
 public class Dama {
 
     private Color color;
-    private Posicion posicion;
+    private Posicion Posicion;
     private boolean esDamaEspecial;
 
     //Constructor por defecto
     public Dama() {
         this.color = Color.BLANCO;
-        this.posicion = crearPosicionInicial(Color.BLANCO);
+        this.Posicion = crearPosicionInicial(Color.BLANCO);
         this.esDamaEspecial = false;
     }
 
@@ -19,7 +19,7 @@ public class Dama {
             throw new IllegalArgumentException("El color no puede ser nulo");
         }
         this.color = color;
-        this.posicion = crearPosicionInical(color);
+        this.Posicion = crearPosicionInical(color);
         this.esDamaEspecial = false;
     }
 
@@ -40,6 +40,17 @@ public class Dama {
 
     public void setEsDamaEspecial(boolean esDamaEspecial) {
         this.esDamaEspecial = esDamaEspecial;
+    }
+
+    //Metodo para crear la posicion inicial de la Dama
+    private Posicion crearPosicionInicial(Color color) {
+        Random random = new Random();
+        int fila = color == Color.BLANCO ? random.nextInt(3) + 1 : random.nextInt(3) + 6;
+        int columna;
+        do {
+            columna = random.nextInt(8) + 1;
+        } while ((fila + columna) % 2 == 0); //Asegura que este en una casilla negra
+        return new Posicion(fila, columna);
     }
 
 }
