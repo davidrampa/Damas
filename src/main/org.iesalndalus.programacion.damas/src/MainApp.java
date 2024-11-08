@@ -11,4 +11,9 @@ public class MainApp {
         }
     }
 
+    public static void crearDamaDefecto() {
+        dama = new Dama();
+        System.out.println("Dama creada por defecto.");
+    }
+
 }
