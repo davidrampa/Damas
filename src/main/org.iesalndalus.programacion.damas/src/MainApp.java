@@ -52,5 +52,13 @@ public class MainApp {
         }
     }
 
+    public static void main(String[] args) {
+        int opcion;
+        do {
+            Consola.mostrarMenu();
+            opcion = Consola.elegirOpcionMenu();
+            ejecutarOpcion(opcion);
+        } while (opcion != 4);
+    }
 
 }
