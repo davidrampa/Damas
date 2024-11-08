@@ -59,5 +59,13 @@ public class Consola {
         };
     }
 
+    public static int elegirPasos() {
+        int pasos;
+        do {
+            System.out.print("Introduce el número de pasos (mínimo 1): ");
+            pasos = Entrada.entero();
+        } while (pasos < 1);
+        return pasos;
+    }
 
 }
