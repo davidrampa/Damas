@@ -44,4 +44,13 @@ public class MainApp {
         }
     }
 
+    public static void mostrarDama() {
+        if (dama != null) {
+            System.out.println(dama);
+        } else {
+            System.out.println("No hay una dama creada actualmente.");
+        }
+    }
+
+
 }
