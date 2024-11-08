@@ -25,5 +25,14 @@ public class Consola {
         return (opcion == 1) ? Color.WHITE : Color.BLACK;
     }
 
+    public static Color elegirOpcion() {
+        int opcion;
+        do {
+            System.out.println("elige un color (1 para Blanco, 2 para Negro): ");
+            opcion = Entrada.entero();
+        } while (opcion <1 || opcion > 2);
+
+        return (opcion == 1) ? Color.WHITE : Color.BLACK;
+    }
 
 }
