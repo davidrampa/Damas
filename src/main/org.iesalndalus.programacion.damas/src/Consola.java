@@ -42,4 +42,22 @@ public class Consola {
         System.out.println("3. Sureste");
         System.out.println("4. Suroeste");
     }
+
+    public static Direccion elegirDireccion() {
+        int opcion;
+        do {
+            System.out.print("Elige una dirección (1-4): ");
+            opcion = Entrada.entero();
+        } while (opcion < 1 || opcion > 4);
+
+        return switch (opcion) {
+            case 1 -> Direccion.NORESTE;
+            case 2 -> Direccion.NOROESTE;
+            case 3 -> Direccion.SURESTE;
+            case 4 -> Direccion.SUROESTE;
+            default -> throw new IllegalArgumentException("Dirección inválida");
+        };
+    }
+
+
 }
