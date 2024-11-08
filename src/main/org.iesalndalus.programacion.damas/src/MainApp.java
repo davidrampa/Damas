@@ -16,4 +16,10 @@ public class MainApp {
         System.out.println("Dama creada por defecto.");
     }
 
+    public static void crearDamaColor() {
+        Color color = Consola.elegirOpcion();  // Asumiendo que Consola.elegirOpcion devuelve un color válido
+        dama = new Dama(color);
+        System.out.println("Dama creada de color " + color + ".");
+    }
+
 }
