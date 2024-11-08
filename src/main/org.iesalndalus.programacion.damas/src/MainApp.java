@@ -22,4 +22,26 @@ public class MainApp {
         System.out.println("Dama creada de color " + color + ".");
     }
 
+    public static void mover() {
+        if (dama == null) {
+            System.out.println("Primero debes crear una dama.");
+            return;
+        }
+
+        Consola.mostrarMenuDirecciones();
+        Direccion direccion = Consola.elegirDireccion();
+
+        int pasos = 1;
+        if (dama.isEsDamaEspecial()) {
+            pasos = Consola.elegirPasos();
+        }
+
+        try {
+            dama.mover(direccion, pasos);
+            System.out.println("La dama se ha movido a la posición: " + dama.getPosicion());
+        } catch (OperationNotSupportedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 }
